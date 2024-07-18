@@ -1,0 +1,16 @@
+h2 {
+    text-align: center;
+    animation-name: Anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: black;
+    scale: 100%;
+}
+
+@keyframes Anim {
+    0% {color: black; scale: 100%;}
+    25% {color: rgb(255, 0, 0);}
+    50% {color: magenta; scale: 200%;}
+    75% {color: rgb(0, 170, 255);}
+    100% {color: rgb(0, 0, 0); scale: 100%;}
+}
