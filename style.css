@@ -5,6 +5,7 @@ h2 {
     animation-iteration-count: infinite;
     color: black;
     scale: 100%;
+    font-family: VCR OSD Mono;
 }
 
 @keyframes Anim {
@@ -17,7 +18,13 @@ h2 {
 
 .time {
     position: fixed;     
-    text-align: center;    
+    text-align: center;
     bottom: 0px; 
     width: 100%;
+    font-family: VCR OSD Mono;
+}
+
+@font-face {
+    font-family: VCR OSD Mono;
+    src: url(fonts/VCR_OSD_MONO_1.001.ttf);
 }
