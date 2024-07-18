@@ -27,3 +27,24 @@ setInterval(() => {
         document.getElementById("t").style.color="rgb(179, 0, 255)";
     }
 })
+
+var image = [
+    "images/aol-guy-dancing-aol.gif",
+    "images/forg.jpg",
+    "angy.jpg",
+    "Been.jpg",
+    "big floppa.png",
+    "capisaur.jpg"
+]
+
+function changeImage() {
+    let num = Math.floor(Math.random() * image.length)
+    document.getElementById("images").src=image[num]
+}
+
+
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 73) {
+        document.getElementById("images").style.opacity="1.0"
+    }
+});
