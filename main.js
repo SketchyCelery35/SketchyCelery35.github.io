@@ -1,7 +1,9 @@
 let seconds = 0;
+let count = 0;
+
 setInterval(() => {
     seconds++;
-    document.getElementById("t").innerHTML = "Time spent watching the :O\n"+seconds
+    document.getElementById("t").innerHTML = "Time spent watching the :O\n"+seconds;
 }, 1000)
 
 setInterval(() => {
@@ -34,17 +36,22 @@ var image = [
     "images/angy.jpg",
     "images/Been.jpg",
     "images/big floppa.png",
-    "images/capisaur.jpg"
+    "images/capisaur.jpg",
+    "images/jumpscare.jpg",
+    "images/ao-oni-dance.gif"
 ]
 
 function changeImage() {
-    let num = Math.floor(Math.random() * image.length)
-    document.getElementById("images").src=image[num]
+    let num = Math.floor(Math.random() * image.length);
+    document.getElementById("images").src=image[num];
+    count++;
+    document.getElementById("imageCount").innerHTML=count;
 }
 
 
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 73) {
-        document.getElementById("images").style.opacity="1.0"
+        document.getElementById("images").style.opacity="1.0";
+        document.getElementById("imageCount").style.opacity="1.0";
     }
 });

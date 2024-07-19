@@ -8,12 +8,21 @@ h2 {
     font-family: VCR OSD Mono;
 }
 
+div {
+    padding: 50px;
+}
 @keyframes Anim {
     0% {color: black; scale: 100%;}
     25% {color: rgb(255, 0, 0);}
     50% {color: magenta; scale: 200%;}
     75% {color: rgb(0, 170, 255);}
     100% {color: rgb(0, 0, 0); scale: 100%;}
+}
+
+@keyframes imageAnim {
+    0% {scale: 100%;}
+    50% {scale: 130%;}
+    100% {scale: 100%;}
 }
 
 .time {
@@ -34,5 +43,16 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     width: 240px;
+    opacity: 0.0;
+}
+
+.imageBox {
+    animation-name: imageAnim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    object-position: center center;
+}
+
+.icount {
     opacity: 0.0;
 }
