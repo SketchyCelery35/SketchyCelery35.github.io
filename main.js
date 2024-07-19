@@ -71,7 +71,7 @@ function changeImage() {
     let num = Math.floor(Math.random() * image.length);
     document.getElementById("images").src=image[num];
     count++;
-    document.getElementById("imageCount").innerHTML=count;
+    document.getElementById("imageCount").innerHTML="- " + count + " -";
 }
 
 
