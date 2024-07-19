@@ -31,10 +31,10 @@ setInterval(() => {
 var image = [
     "images/aol-guy-dancing-aol.gif",
     "images/forg.jpg",
-    "angy.jpg",
-    "Been.jpg",
-    "big floppa.png",
-    "capisaur.jpg"
+    "images/angy.jpg",
+    "images/Been.jpg",
+    "images/big floppa.png",
+    "images/capisaur.jpg"
 ]
 
 function changeImage() {
