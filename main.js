@@ -1,9 +1,35 @@
 let seconds = 0;
 let count = 0;
+var face = [
+    ":O",
+    ">:O",
+    ":D",
+    ":)",
+    ":]",
+    "(ง •_•)ง",
+    "(⓿_⓿)",
+    "(●'◡'●)",
+    "┏ (゜ω゜)=👉",
+    "༼ つ ◕_◕ ༽つ",
+    "(⊙ˍ⊙)",
+    "=]",
+    "✍️(◔◡◔)",
+    "(👉ﾟヮﾟ)👉",
+    "(•_•)",
+    "(⌐■_■)",
+    "( •_•)>⌐■-■",
+    ":[",
+    "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧",
+    "d=====(￣▽￣*)b",
+    "(°ロ°)"
+]
+let num3 = Math.floor(Math.random()*face.length)
 
 setInterval(() => {
     seconds++;
-    document.getElementById("t").innerHTML = "Time spent watching the :O\n"+seconds;
+    document.getElementById("t").innerHTML = "Time spent watching the " + face[num3] + "\n"+seconds;
+    document.getElementById("face").innerHTML = face[num3]
+    console.warn(num3)
 }, 1000)
 
 setInterval(() => {
