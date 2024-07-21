@@ -29,7 +29,6 @@ setInterval(() => {
     seconds++;
     document.getElementById("t").innerHTML = "Time spent watching the " + face[num3] + "\n"+seconds;
     document.getElementById("face").innerHTML = face[num3]
-    console.warn(num3)
 }, 1000)
 
 setInterval(() => {
@@ -72,12 +71,17 @@ function changeImage() {
     document.getElementById("images").src=image[num];
     count++;
     document.getElementById("imageCount").innerHTML="- " + count + " -";
+    APPEAR()
 }
 
 
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 73) {
-        document.getElementById("images").style.opacity="1.0";
-        document.getElementById("imageCount").style.opacity="1.0";
+        APPEAR();
     }
 });
+
+function APPEAR() {
+    document.getElementById("images").style.opacity="1.0";
+    document.getElementById("imageCount").style.opacity="1.0";
+}
