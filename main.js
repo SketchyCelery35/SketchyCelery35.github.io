@@ -29,6 +29,7 @@ setInterval(() => {
     seconds++;
     document.getElementById("t").innerHTML = "Time spent watching the " + face[num3] + "\n"+seconds;
     document.getElementById("face").innerHTML = face[num3]
+    document.title = face[num3]
 }, 1000)
 
 setInterval(() => {
