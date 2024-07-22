@@ -4,6 +4,18 @@ htmtl, body {
     overflow: hidden;
 }
 
+body  {
+    background: linear-gradient(
+        -45deg,
+        rgb(234, 189, 189),
+        rgb(156, 193, 216),
+        rgb(202, 255, 202),
+        rgb(253, 202, 255)
+        );
+    background-size: 400% 400%;
+    animation: backgroundAnim 10s ease infinite;
+}
+
 h2 {
     text-align: center;
     position: fixed;
@@ -15,10 +27,6 @@ h2 {
     color: black;
     scale: 100%;
     font-family: VCR OSD Mono;
-}
-
-div {
-    padding: 100px;
 }
 
 @keyframes Anim {
@@ -37,7 +45,11 @@ div {
     100% {color: rgb(0, 0, 0); scale: 100%;}
 }
 
-
+@keyframes backgroundAnim {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 
 @keyframes imageAnim {
     0% {scale: 100%;}
@@ -63,7 +75,11 @@ div {
     margin-left: auto;
     margin-right: auto;
     width: 240px;
+    height: 240px;
+    max-width: 100%;
     opacity: 0.0;
+    padding-top: 160px;
+    transform-origin: center center;
 }
 
 .imageBox {

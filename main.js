@@ -75,10 +75,20 @@ function changeImage() {
     APPEAR()
 }
 
-
+let rotation = 0;
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 73) {
         APPEAR();
+    }
+    if(event.keyCode == 37) {
+        rotation=rotation+10;
+        document.getElementById("face").style.transform = "rotate(" + rotation + "deg)";
+        console.log(rotation)
+    }
+    if(event.keyCode == 39) {
+        rotation=rotation-10;
+        document.getElementById("face").style.transform = "rotate(" + rotation + "deg)";
+        console.log(rotation)
     }
 });
 
