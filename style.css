@@ -19,30 +19,102 @@ body  {
 h2 {
     text-align: center;
     position: fixed;
-    animation-name: Anim;
     top: 0px;
     width: 100%;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation: Anim 2s ease infinite;
     color: black;
     scale: 100%;
     font-family: VCR OSD Mono;
 }
 
+.time {
+    position: fixed;     
+    text-align: center;
+    bottom: 0px; 
+    width: 100%;
+    font-family: VCR OSD Mono;
+}
+
+.images {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    height: 240px;
+    max-width: 100%;
+    opacity: 0.0;
+}
+
+.imageBox {
+    animation: imageAnim 4s ease infinite;
+    object-position: center center;
+    padding-top: 160px;
+}
+
+.icount {
+    opacity: 0.0;
+    text-align: center;
+    animation: Anim2 2s ease infinite;
+}
+
+/* menu stuff */
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        rgb(96, 96, 96),
+        rgb(58, 58, 58)
+        );
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: solid;
+    border-color: rgb(58, 58, 58);
+    border-width: 3px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+  
+.menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s ease-out;
+}
+  
+.menu a:hover {
+    animation: hover 2s ease infinite;
+}
+  
+.menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 @keyframes Anim {
-    0% {color: black; scale: 100%;}
-    25% {color: rgb(255, 0, 0);}
-    50% {color: magenta; scale: 200%;}
-    75% {color: rgb(0, 170, 255);}
-    100% {color: rgb(0, 0, 0); scale: 100%;}
+    0% {color: black; scale: 100%; rotate: -5deg;}
+    25% {color: rgb(255, 0, 0); rotate: 5deg;}
+    50% {color: magenta; scale: 200%; rotate: -5deg;}
+    75% {color: rgb(0, 170, 255); rotate: 5deg;}
+    100% {color: rgb(0, 0, 0); scale: 100%; rotate: -5deg;}
 }
 
 @keyframes Anim2 {
-    0% {color: black; scale: 100%;}
-    25% {color: rgb(255, 0, 0);}
-    50% {color: rgb(0, 34, 255); scale: 180%;}
-    75% {color: magenta;}
-    100% {color: rgb(0, 0, 0); scale: 100%;}
+    0% {color: black; scale: 100%; rotate: 5deg;}
+    25% {color: rgb(255, 0, 0); rotate: -5deg;}
+    50% {color: rgb(0, 34, 255); scale: 180%; rotate: 5deg;}
+    75% {color: magenta; rotate: -5deg;}
+    100% {color: rgb(0, 0, 0); scale: 100%; rotate: 5deg;}
 }
 
 @keyframes backgroundAnim {
@@ -57,42 +129,20 @@ h2 {
     100% {scale: 100%;}
 }
 
-.time {
-    position: fixed;     
-    text-align: center;
-    bottom: 0px; 
-    width: 100%;
-    font-family: VCR OSD Mono;
+@keyframes hover {
+    0% {color: rgb(216, 216, 216); scale: 100%; rotate: 3deg;}
+    25% {color: rgb(255, 0, 0); rotate: -3deg;}
+    50% {color: rgb(124, 213, 231); scale: 130%; rotate: 3deg;}
+    75% {color: magenta; rotate: -3deg;}
+    100% {color: rgb(216, 216, 216); scale: 100%; rotate: 3deg;}
+}
+
+@media screen and (max-height: 450px) {
+    .menu {padding-top: 15px;}
+    .menu a {font-size: 18px;}
 }
 
 @font-face {
     font-family: VCR OSD Mono;
     src: url(fonts/VCR_OSD_MONO_1.001.ttf);
-}
-
-.images {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 240px;
-    height: 240px;
-    max-width: 100%;
-    opacity: 0.0;
-    padding-top: 160px;
-    transform-origin: center center;
-}
-
-.imageBox {
-    animation-name: imageAnim;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    object-position: center center;
-}
-
-.icount {
-    opacity: 0.0;
-    text-align: center;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: Anim2;
 }

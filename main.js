@@ -64,7 +64,9 @@ var image = [
     "images/big floppa.png",
     "images/capisaur.jpg",
     "images/jumpscare.jpg",
-    "images/ao-oni-dance.gif"
+    "images/ao-oni-dance.gif",
+    "images/fox_image_1.png",
+    "images/fox_image_2.png"
 ]
 
 function changeImage() {
@@ -77,8 +79,11 @@ function changeImage() {
 
 let rotation = 0;
 document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 73) {
+    if(event.keyCode == 73 || event.keyCode == 32) {
         APPEAR();
+    }
+    if (event.keyCode ==32) {
+        changeImage()
     }
     if(event.keyCode == 37) {
         rotation=rotation+10;
@@ -96,3 +101,11 @@ function APPEAR() {
     document.getElementById("images").style.opacity="1.0";
     document.getElementById("imageCount").style.opacity="1.0";
 }
+
+function openMenu() {
+    document.getElementById("menu").style.width = "250px";
+  }
+  
+  function closeMenu() {
+    document.getElementById("menu").style.width = "0";
+  }
